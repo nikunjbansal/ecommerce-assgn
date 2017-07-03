@@ -11,8 +11,11 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
 	return {
 		actions: {
-			onAddItem: id => {
-				dispatch(()=>{setTimeout(100, () => {console.log('cart has been indulged with...')})})
+			setItemCount: (item, value) => {
+				dispatch({type:'SET_ITEM_COUNT', data: {item: item, value: value}})
+			},
+			onCheckout: () => {
+				dispatch({type: 'CHECKOUT'})
 			}
 		}
 	}

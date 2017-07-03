@@ -1,6 +1,6 @@
 
 let items = [
-	{id: 1, desc: 'Hamburger', image: 'hamburger.jpg', price: '200$'}
+	{id: 1, desc: 'Hamburger', image: 'hamburger.jpg', price: 200}
 ]
 
 const menu = (state=items, action) => {
