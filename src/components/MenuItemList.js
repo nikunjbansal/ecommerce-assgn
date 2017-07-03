@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ItemListWrapper from './ItemListHOC'
+import MenuItem from './MenuItem'
 
 const MenuItemList = props => (
 	<div className="menu">
@@ -9,15 +9,15 @@ const MenuItemList = props => (
 		</div>
 	{
 		props.items.map(item =>(
-				<div className="item" key={"menu"+item.id}>
-					<img width={100} height={75} src={item.image} />
-					<p>{item.desc}></p>
-					<button onClick = {props.actions.onAddItem}>ADD TO CART</button>
-				</div>
-			)
-		)
+			<MenuItem
+				key={'menu'+item.id}
+				item={item}
+				actions={props.actions}
+				{...props}
+			/>
+		))
 	}
-	</div>											
+	</div>
 )
 
 export default MenuItemList;

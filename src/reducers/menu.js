@@ -1,26 +1,16 @@
 
-let store = {
-	items: [
-		{id: 1, desc: 'product', image: 'hamburger.jpg'}
-	],
-	cart: []
-}
+let items = [
+	{id: 1, desc: 'Hamburger', image: 'hamburger.jpg', price: '200$'}
+]
 
-const main = (state=store, action) => {
+const menu = (state=items, action) => {
 	switch(action.type) {
 		case 'ADD_TO_CART' : {
-			let cart = [
-				...state.cart,
-				state.items.filter((item)=>(item.id == action.data))
-			]
-			return {
-					...state,
-					cart
-				}
+				return state;
 		}
-		default : 
+		default :
 			return state
 	}
 }
 
-export default main;
+export default menu;

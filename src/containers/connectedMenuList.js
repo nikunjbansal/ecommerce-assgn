@@ -4,15 +4,19 @@ import MenuItemList from '../components/MenuItemList';
 
 const mapStateToProps = (state) => {
 	return {
-		items: state.menu.items
+		items: state.menu,
+		cart: state.cart
 	}
 }
 
 const mapDispatchToProps = (dispatch) => {
 	return {
 		actions: {
-			onAddItem: id => {
-				dispatch({type: 'ADD_TO_CART', data: id})
+			onAddItem: item => {
+				dispatch({type: 'ADD_TO_CART', data: item})
+			},
+			onRemoveItem: item => {
+				dispatch({type: 'REMOVE_FROM_CART', data: item})
 			}
 		}
 	}

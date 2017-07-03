@@ -11,7 +11,8 @@ import thunk from 'redux-thunk';
 import ecommerce from './reducers'
 
 let store = createStore(ecommerce, compose(
-		applyMiddleware(thunk)
+		applyMiddleware(thunk),
+		window.devToolsExtension ? window.devToolsExtension() : f => f
 	)
 );
 
