@@ -1,5 +1,8 @@
 import React from 'react'
+import { Route } from 'react-router'
+
 import CartItem from './CartItem'
+import Checkout from './Checkout'
 
 const getCartList = props => {
 		if(props.items.length == 0) {
@@ -42,7 +45,9 @@ const CartItemList = props => (
 		</div>
 
 		<div className="item">
-			<button
+			<button 
+				style={{backgroundColor: props.theme.buttonColor}}
+				className="button"
 				onClick={()=>(
 					getTotalCartPrice(props.items) == 0
 					? ''
@@ -50,7 +55,6 @@ const CartItemList = props => (
 				)}
 			>CHECKOUT</button>
 		</div>
-
 	</div>
 )
 
