@@ -18,7 +18,10 @@ const mapDispatchToProps = (dispatch) => {
 			},
 			redirectTo: (path) => {
 				dispatch(push(path))
-			}
+			},
+			setItemCount: (item, value) => {
+				dispatch({type:'SET_ITEM_COUNT', data: {item: item, value: value}})
+			},
 		}
 	}
 }

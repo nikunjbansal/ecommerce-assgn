@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "desc": "Hamburger",
+      "image": "hamburger.jpg",
+      "price": "600"
+    },
+    {
+      "id": 2,
+      "desc": "Hamburger",
+      "image": "hamburger.jpg",
+      "price": "2"
+    },
+    {
+      "id": 3,
+      "desc": "Hamburger",
+      "image": "hamburger.jpg",
+      "price": 200
+    },
+    {
+      "id": 4,
+      "desc": "Hamburger",
+      "image": "hamburger.jpg",
+      "price": 200
+    }
+  ]
+}

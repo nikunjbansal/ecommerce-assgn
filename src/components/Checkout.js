@@ -2,6 +2,7 @@ import React from 'react';
 
 import Header from './Header';
 import Success from './Success'
+import CartItemList from './CartItemList';
 
 import '../App.css'
 
@@ -30,10 +31,11 @@ export default class Checkout extends React.Component {
           			isPaid 
           				? <Success {...this.props.actions} />
           				: <div style={styles.container}>
+          					{ CartItemList( {actions: {...this.props.actions}, items: this.props.items, theme: this.props.theme} ) }
 				        	<label style={{}}>Address:</label>
 				        	<textarea cols={75} rows={10} />
 				        	<button 
-				        		style={{backgroundColor: this.props.theme.buttonColor}}
+				        		style={{backgroundColor: this.props.theme.buttonColor, fontSize: '50px'}}
 				        		className="button"
 				        		onClick={()=>this.checkout()}
 			        		>PAY {this.getTotalCartPrice(this.props.items)}&#8377;

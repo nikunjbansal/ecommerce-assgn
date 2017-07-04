@@ -26,7 +26,6 @@ const addToCartButton = props => {
 const MenuItem = props => {
 
     let button = addToCartButton(props);
-
     return (
       <div className="item">
         <img width={100} height={75} src={props.item.image} />
