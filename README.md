@@ -1,5 +1,9 @@
 Clone the repo
 
-run npm install
+npm install
 
-run npm start
+npm start
+
+#in separate command prompt, start the local database
+
+node server.js
